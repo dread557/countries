@@ -1,13 +1,201 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 45px;
+    transition: all ease-in-out;
+}
+
+.sticky {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 45px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar h1,
+.sticky h1 {
+    font-size: 1rem;
+}
+
+.dark-mode-btn {
+    border: none;
+    background: transparent;
+    font-size: .8rem;
+}
+
+.dark-mode-btn:hover {
+    cursor: pointer;
+}
+
+.search-select-grp {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+}
+
+.search-box {
+    width: 364px;
+}
+
+.search-box input {
+    padding: 18px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: 0;
+}
+
+.select-box {
+    width: 200px;
+    height: 40px;
+}
+
+.select-box select {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 30px;
+    padding: 45px;
+    justify-content: center;
+}
+
+.flag {
+    width: 100%;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details p:first-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.country-details-btn-grp {
+    padding: 45px;
+}
+
+.country-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.country-details-grp {
+    display: flex;
+    gap: 150px;
+}
+
+.country-details-btn-grp button {
+    border: 0;
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.country-details-btn-grp button:hover {
+    cursor: pointer;
+}
+
+.flag-lg {
+    width: 50%;
+}
+
+.flag-lg img {
+    width: 100%;
+}
+
+.country-details-txt {
+    width: 50%;
+}
+
+.p-title {
+    font-weight: bold;
+}
+
+.border-countries {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.border-grp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.border {
+    margin-right: 15px;
+    padding: 6px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 560px) {
+
+    .search-select-grp {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .search-box {
+        width: inherit;
+    }
+
+    .countries {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .country-details {
+        flex-direction: column;
+    }
+
+    .country-details-grp {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .border-countries {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .flag-lg,
+    .country-details-txt {
+        width: 100%;
+    }
 }
